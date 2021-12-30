@@ -21,8 +21,8 @@ public class CategoryService {
 		return categoryProxy.getCategoryById(id);
 	}
 
-	public void save(Category product) {
-		categoryProxy.save(product);		
+	public void save(Category category) {
+		categoryProxy.save(category);		
 	}
 	
 }
