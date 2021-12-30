@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Product page </title>
+</head>
+<body>
+		
+        <table>
+            <CAPTION ALIGN="TOP"><h1 th:text="${category.name}"></h1></CAPTION>
+            <thead>
+                <th>contenu</th>
+                <th>date publication</th>
+                <th>auteur</th>
+                <th>Link</th>
+            </thead>
+            <tbody>
+            <tr th:each="article : ${category.articles}">
+                <td><span th:text="${article.content}"></span ></td > 
+                <td><span th:text="${#dates.format(article.date_pub, 'yyyy-MM-dd')}"></span ></td >
+                <td><span th:text="${article.author.username}"></span ></td >
+                <td ><a th:href="@{/public/article/{id}(id=${article.article_id})}">See</a ></td >
+            </tr>
+        </table>
+</body>
+</html>
