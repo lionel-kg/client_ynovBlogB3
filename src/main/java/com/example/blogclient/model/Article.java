@@ -11,14 +11,15 @@ public class Article {
 
 	private Integer article_id;
 	private String content;
-	private Date date_pub;
+	private Integer Category_Id;
+	private Date date_pub = new Date();
 	private Author author;
 	
 
 	public void setCommentary(List<Commentary> commentary) {
 		this.commentary = commentary;
 	}
-
+	
 	public Author getAuthor() {
 		return author;
 	}
@@ -62,5 +63,13 @@ public class Article {
 	public void setDate_pub(Date date_pub) 
 	{
 		this.date_pub = date_pub;
+	}
+
+	public Integer getCategory_Id() {
+		return Category_Id;
+	}
+
+	public void setCategory_Id(Integer category_Id) {
+		Category_Id = category_Id;
 	}
 }

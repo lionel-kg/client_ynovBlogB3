@@ -19,7 +19,7 @@
                 <td><span th:text="${article.content}"></span ></td > 
                 <td><span th:text="${#dates.format(article.date_pub, 'yyyy-MM-dd')}"></span ></td >
                 <td><span th:text="${article.author.username}"></span ></td >
-                <td ><a th:href="@{/public/article/{id}(id=${article.article_id})}">See</a ></td >
+                <td ><a th:href="@{/public/article/{id}(id=${article.article_id})}">voir plus</a></td >
             </tr>
         </table>
 </body>

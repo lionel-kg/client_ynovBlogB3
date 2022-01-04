@@ -41,7 +41,7 @@ public class ArticleProxy {
 		
 		ResponseEntity<List<Article>> response =
 				restTemplate.exchange(
-						props.getPublicurl() + "/article", 
+						props.getPublicurl() + "/articles", 
 						HttpMethod.GET, 
 						new HttpEntity<>(createTokenHeaders()), 
 						new ParameterizedTypeReference<List<Article>>() {}
@@ -72,5 +72,15 @@ public class ArticleProxy {
 				request,
 				Article.class				
 				);
-	}	
+	}
+
+	/* public void deleteArticle(Integer id) {
+		RestTemplate restTemplate = new RestTemplate();
+		
+		restTemplate.exchange(
+				props.getPublicurl() + "/article/" + id, 
+				HttpMethod.DELETE, 
+				new HttpEntity<>(createTokenHeaders()), 
+				Article.class);
+	}	*/
 }

@@ -12,11 +12,13 @@
 			<th>Article</th>
             <th>date pub</th>
             <th>auteur</th>
+            <th>action</th>
 		</thead>
         <tbody>
             <tr><td><span th:text="${article.content}"/></td>
-            <td><span th:text="${article.date_pub}"/></td>
+            <td><span th:text="${#dates.format(article.date_pub, 'yyyy-MM-dd')}"/></td>
             <td><span th:text="${article.author.username}"/></td>
+            <td><a th:href="@{/public/article/del/{id}(id=${article.article_id})}">Supprimer</a></td>
         </tr>
         </tbody>
 		<thead>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>New category</title>
+</head>
+<body>
+	<form method="post" th:action="@{/public/category/add}" th:object="${category}">
+		<input type="text" th:field="*{name}"> 
+		<button type="submit">Créer</button>
+	</form>
+</body>
+</html>

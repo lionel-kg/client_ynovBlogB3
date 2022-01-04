@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.blogclient.model.Article;
+import com.example.blogclient.model.Author;
 import com.example.blogclient.repository.ArticleProxy;
 
 @Service
@@ -24,4 +25,14 @@ public class ArticleService {
 	public void save(Article article) {
 		articleProxy.save(article);		
 	}
+	
+	/*public void deleteArticle(Integer id) {
+		articleProxy.deleteArticle(id);
+	}*/
+	/*public void addArticle(Article article, Author author, Integer id) {
+		article.setAuthor(author);
+		article.setCategory_Id(id);
+		articleProxy.save(article);	
+	}*/
+	
 }

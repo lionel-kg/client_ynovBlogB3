@@ -14,8 +14,16 @@ public class Commentary {
 	public void setAuthor(Author author) {
 		this.author = author;
 	}
+	public Integer article_Id;
 
-	private Date date_pub;
+	public Integer getArticle_Id() {
+		return article_Id;
+	}
+
+	public void setArticle_Id(Integer article_Id) {
+		this.article_Id = article_Id;
+	}
+	private Date date_pub = new Date();
 	private String content;
 	
 	public int getComment_id() 

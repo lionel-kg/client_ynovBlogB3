@@ -27,20 +27,22 @@ public class CategoryController {
 	@Autowired
 	private CategoryService categoryService;
 	
-	@Autowired
-	private LoginService loginService;
+	/*@Autowired LoginService loginService;
 	
 	public void login()
     {
         ApiUser user = new ApiUser();
-        user.setUsername("jojo");
-        user.setPassword("password");
+        user.setUsername("user");
+        user.setPassword("user");
         loginService.login(user);
+
+
     }
+	*/
 	
 	@GetMapping("/categories")
 	public String categoriesPage(Model model, HttpSession session) {
-		login();
+		
 		List<Category> categories = categoryService.getCategories();
 		model.addAttribute("categories", categories);
 		return "categories";
@@ -56,12 +58,12 @@ public class CategoryController {
 	@PostMapping("/category/add")
 	public ModelAndView createNewCategory(@ModelAttribute Category category) {
 		categoryService.save(category);
-		return new ModelAndView("redirect:/categories");
+		return new ModelAndView("redirect:/public/categories");
 	}
 	
 	@GetMapping("/newCategory")
 	public String newCategoryPage(Model model) {
 		model.addAttribute("category", new Category());
-		return "newCategory";
+		return "addCategory";
 	}
 }
