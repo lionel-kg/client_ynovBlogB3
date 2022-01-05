@@ -73,6 +73,16 @@ public class CategoryProxy {
 				request,
 				Category.class				
 				);
-	}	
+	}
+
+	/*public void deleteCategory(Integer id) {
+		RestTemplate restTemplate = new RestTemplate();
+		
+		restTemplate.exchange(
+				props.getPublicurl() + "/category/" + id, 
+				HttpMethod.DELETE, 
+				new HttpEntity<>(createTokenHeaders()), 
+				Category.class);
+	}*/
 	
 }

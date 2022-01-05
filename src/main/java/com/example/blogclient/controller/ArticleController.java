@@ -1,6 +1,5 @@
 package com.example.blogclient.controller;
 
-import java.security.Principal;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -27,6 +26,7 @@ import com.example.blogclient.model.Category;
 import com.example.blogclient.service.ArticleService;
 import com.example.blogclient.service.AuthorService;
 import com.example.blogclient.service.CategoryService;
+import com.example.blogclient.service.CommentaryService;
 import com.example.blogclient.service.LoginService;
 
 @Controller
@@ -38,6 +38,9 @@ public class ArticleController {
 	
 	@Autowired
 	private CategoryService categoryService;
+	
+	@Autowired
+	private CommentaryService commentaryService;
 	
 	@Autowired
 	private AuthorService authorService;
@@ -99,6 +102,11 @@ public class ArticleController {
 	/*@GetMapping("/article/del/{id}") 
 	public ModelAndView deleteArticle(@PathVariable("id") Integer id){
 		articleService.deleteArticle(id);
+		return new ModelAndView("redirect:/public/articles");
+	}*/
+	/*@GetMapping("public/commentary/del/{id}") 
+	public ModelAndView deleteCommentary(@PathVariable("id") Integer id){
+		commentaryService.deleteCommentary(id);
 		return new ModelAndView("redirect:/public/articles");
 	}*/
 }

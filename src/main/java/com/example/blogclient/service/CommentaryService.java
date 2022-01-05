@@ -16,4 +16,8 @@ public class CommentaryService {
 	public void save(Commentary commentary) {
 		commentaryProxy.save(commentary);		
 	}
+
+	/*public void deleteCommentary(Integer id) {
+		commentaryProxy.deleteCommentary(id);
+	}*/
 }

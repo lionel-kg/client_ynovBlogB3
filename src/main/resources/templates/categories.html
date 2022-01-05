@@ -17,9 +17,13 @@
 			<tr th:each="category: ${categories}">
 				<td><span th:text="${category.name}"/></td>
 				<td><span th:text="${category.categoryId}"/></td>
-				<td><a th:href="@{/public/category/{id}(id=${category.categoryId})}">voir plus</a></td>
+				<td>
+					<a th:href="@{/public/category/{id}(id=${category.categoryId})}">voir plus</a>
+					<a th:href="@{/public/category/del/{id}(id=${category.categoryId})}">Supprimer</a>
+				</td>
 			</tr>
 		</tbody>
 	</table>
+	<a th:href="@{/public/newCategory}">Ajouter categorie</a>
 </body>
 </html>

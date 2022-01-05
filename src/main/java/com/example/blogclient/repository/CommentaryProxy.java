@@ -46,5 +46,15 @@ public class CommentaryProxy {
 				request,
 				Commentary.class				
 				);
-	}	
+	}
+
+	/*public void deleteCommentary(Integer id) {
+		RestTemplate restTemplate = new RestTemplate();
+		
+		restTemplate.exchange(
+				props.getPublicurl() + "/commentary/" + id, 
+				HttpMethod.DELETE, 
+				new HttpEntity<>(createTokenHeaders()), 
+				Commentary.class);
+	}	*/
 }

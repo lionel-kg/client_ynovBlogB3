@@ -21,7 +21,7 @@ import com.example.blogclient.service.CategoryService;
 import com.example.blogclient.service.LoginService;
 
 @Controller
-@RequestMapping("public")
+@RequestMapping("/public")
 public class CategoryController {
 	
 	@Autowired
@@ -66,4 +66,10 @@ public class CategoryController {
 		model.addAttribute("category", new Category());
 		return "addCategory";
 	}
+	
+	/*@GetMapping("/category/del/{id}")
+	public ModelAndView deleteCategory(@PathVariable("id") Integer id) {
+		categoryService.deleteCategory(id);
+		return new ModelAndView("redirect:/public/categories");
+	}*/
 }

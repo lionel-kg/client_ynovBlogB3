@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post" th:action="@{/public/commentary/add}" th:object="${commentary}">
+    <form method="post" th:action="@{/private/commentary/add}" th:object="${commentary}">
 		<input type="text" th:field="*{content}"> 
 		<button type="submit">Créer</button>
 	</form>

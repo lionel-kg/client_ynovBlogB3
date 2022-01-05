@@ -24,13 +24,16 @@
 		<thead>
 			<th>commentaire</th>
             <th>auteur</th>
+            <th>action</th>
 		</thead>
 		<tbody>
 			<tr th:each="commentary: ${article.commentary}">
 				<td><span th:text="${commentary.content}"/></td>
 				<td><span th:text="${commentary.author.username}"/></td>
+                <td><a th:href="@{/public/commentary/del/{id}(id=${commentary.comment_id})}">Supprimer</a></td>
 			</tr>
 		</tbody>
 	</table>
+    <a th:href="@{/public/newCommentary/{id}(id=${article.article_id})}">Ajouter un commentaire</a>
 </body>
 </html>

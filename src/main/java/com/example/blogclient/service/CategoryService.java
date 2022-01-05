@@ -24,5 +24,9 @@ public class CategoryService {
 	public void save(Category category) {
 		categoryProxy.save(category);		
 	}
+
+	/*public void deleteCategory(Integer id) {
+		categoryProxy.deleteCategory(id);
+	}*/
 	
 }

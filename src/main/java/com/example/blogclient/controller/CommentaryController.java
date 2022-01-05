@@ -16,14 +16,13 @@ import com.example.blogclient.model.Commentary;
 import com.example.blogclient.service.CommentaryService;
 
 @Controller
-@RequestMapping("public")
 public class CommentaryController {
 	
 	@Autowired
 	CommentaryService commentaryService;
 	
 	@PostMapping("/commentary/add")
-	public ModelAndView createNewCategory(@ModelAttribute Commentary commentary) {
+	public ModelAndView createNewCommentary(@ModelAttribute Commentary commentary) {
 		commentaryService.save(commentary);
 		return new ModelAndView("redirect:/public/categories");
 	}
@@ -38,4 +37,5 @@ public class CommentaryController {
 		model.addAttribute("commentary",commentary);
 		return "addCommentary";
 	}
+	
 }
