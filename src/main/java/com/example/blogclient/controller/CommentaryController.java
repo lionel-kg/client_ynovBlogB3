@@ -16,6 +16,7 @@ import com.example.blogclient.model.Commentary;
 import com.example.blogclient.service.CommentaryService;
 
 @Controller
+@RequestMapping("public")
 public class CommentaryController {
 	
 	@Autowired
